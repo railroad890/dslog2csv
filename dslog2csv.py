@@ -179,7 +179,7 @@ if __name__ == '__main__':
     col = ['inputfile', ]
     col.extend(DSLogParser.OUTPUT_COLUMNS)
     if args.output:
-        outstrm = open(args.output, 'wb')
+        outstrm = open(args.output, 'w')
     else:
         outstrm = sys.stdout
     outcsv = csv.DictWriter(outstrm, fieldnames=col, extrasaction='ignore')
